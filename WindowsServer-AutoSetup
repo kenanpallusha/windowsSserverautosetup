@@ -1,0 +1,9 @@
+# install_roles.ps1
+# PowerShell script to install basic roles for Windows Server
+
+Import-Module ServerManager
+
+Write-Host "Installing Active Directory Domain Services and DNS..."
+Install-WindowsFeature AD-Domain-Services, DNS -IncludeManagementTools
+
+Write-Host "Installation complete. Proceed to setup_AD_DS.ps1"
